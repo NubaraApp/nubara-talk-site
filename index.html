@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nubara Talk</title>
+  <meta name="description" content="App de escritorio para macOS que transcribe y traduce tus reuniones en local. Sin nube, sin telemetría, sin red.">
+  <meta property="og:title" content="Nubara Talk">
+  <meta property="og:description" content="Entendé y respondé reuniones en otro idioma. Todo corre en tu Mac.">
+  <meta property="og:image" content="icon.png">
+  <link rel="icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#">
+        <img src="icon.png" alt="" width="28" height="28">
+        <span>Nubara Talk</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#como">Cómo funciona</a>
+        <a href="#privacidad">Privacidad</a>
+        <a href="#modelos">Modelos</a>
+        <a href="#requisitos">Requisitos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> App para macOS · 100% local</p>
+          <h1>Entendé la reunión.<br><em>Respondé sin trabarte.</em></h1>
+          <p class="lead">
+            Nubara Talk escucha tu micrófono y el audio de la llamada por separado,
+            transcribe y traduce en vivo, y te ayuda a armar la respuesta.
+            Todo corre en tu Mac: sin nube, sin telemetría, sin red.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#requisitos">Empezar</a>
+            <a class="btn btn-ghost" href="https://github.com/NubaraApp/nubara-talk">Ver en GitHub</a>
+          </div>
+          <ul class="facts">
+            <li><strong>2</strong> pistas simultáneas</li>
+            <li><strong>0</strong> datos fuera de tu Mac</li>
+            <li><strong>200</strong> idiomas de traducción</li>
+          </ul>
+        </div>
+
+        <div class="mock" aria-label="Vista de la ventana de Nubara Talk">
+          <div class="mock-bar">
+            <span class="lights"><i></i><i></i><i></i></span>
+            <span class="mock-title">Arquitectura técnica y roles</span>
+            <span class="rec"><span class="rec-dot"></span>Grabando</span>
+          </div>
+          <div class="mock-body">
+            <div class="turn them">
+              <span class="who">Ellos</span>
+              <p>Could you walk us through how the sync layer handles conflicts?</p>
+              <p class="tr">¿Podrías explicarnos cómo maneja los conflictos la capa de sincronización?</p>
+            </div>
+            <div class="turn me">
+              <span class="who">Vos</span>
+              <p>Sure, we keep a vector clock per document and…</p>
+            </div>
+            <div class="turn them selected">
+              <span class="who">Ellos</span>
+              <p>And what happens when two editors go offline at the same time?</p>
+              <p class="tr">¿Y qué pasa cuando dos editores se desconectan al mismo tiempo?</p>
+            </div>
+            <div class="answer">
+              <span class="tag">Respuesta</span>
+              <p>“Both edits are kept as siblings. When they reconnect, we merge field by field and only ask the user if the same field changed.”</p>
+            </div>
+          </div>
+          <div class="mock-composer">
+            <span class="chip">Responder</span>
+            <span class="chip">Traducir</span>
+            <span class="chip">Explicar</span>
+            <span class="ask">Preguntale algo a la reunión… <kbd>⌘K</kbd></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como" class="section">
+      <div class="wrap">
+        <p class="kicker">Cómo funciona</p>
+        <h2>Dos pistas. Cero confusión.</h2>
+        <p class="sub">No hace falta adivinar quién habla: el micrófono sos vos, el audio del sistema son los demás.</p>
+
+        <div class="features">
+          <article class="feature">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M19 11a7 7 0 0 1-14 0M12 18v3"/></svg>
+            </div>
+            <h3>Captura nativa</h3>
+            <p>Graba micrófono y salida del sistema al mismo tiempo, sin drivers ni dispositivos virtuales. No toca tu configuración de audio.</p>
+          </article>
+          <article class="feature">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h13"/></svg>
+            </div>
+            <h3>Transcripción en vivo</h3>
+            <p>Whisper corre en tu Mac y detecta solo el idioma de cada pista. Una vez fijado, la reunión entera sigue en ese idioma.</p>
+          </article>
+          <article class="feature">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5h8M8 3v2M6 5c0 4 3 7 6 8M10 5c0 4-3 7-6 8"/><path d="m13 21 4-9 4 9M14.5 18h5"/></svg>
+            </div>
+            <h3>Traducción local</h3>
+            <p>Subtítulos traducidos debajo de cada frase, con un modelo de traducción que vive en tu disco. Nada sale de la máquina.</p>
+          </article>
+          <article class="feature">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+            </div>
+            <h3>Recetas para responder</h3>
+            <p>Elegí una o varias frases y pedí una respuesta, una traducción o una explicación. O escribí tu propia pregunta con <kbd>⌘K</kbd>.</p>
+          </article>
+          <article class="feature">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM9 9h6M9 13h6M9 17h3"/></svg>
+            </div>
+            <h3>Resumen al cerrar</h3>
+            <p>Temas, decisiones, tareas, preguntas abiertas y datos. La reunión recibe un nombre que dice de qué se habló.</p>
+          </article>
+          <article class="feature">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="1.5"/><circle cx="16" cy="12" r="1.5"/><circle cx="10" cy="17" r="1.5"/></svg>
+            </div>
+            <h3>Historial ordenado</h3>
+            <p>Las reuniones quedan agrupadas por día, con sus respuestas guardadas. Abrís una y está todo como lo dejaste.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidad" class="section band">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Privacidad</p>
+          <h2>Tu reunión no sale de tu Mac.</h2>
+          <p class="sub">Captura, transcripción y traducción corren en local. El servidor interno escucha sólo en <code>127.0.0.1</code>: no es alcanzable desde otra máquina.</p>
+        </div>
+        <ul class="checks">
+          <li><b>Sin API de pago</b> para transcribir ni traducir.</li>
+          <li><b>Sin telemetría.</b> No medimos nada de lo que hacés.</li>
+          <li><b>Sin claves en el código.</b> Se guardan en tu equipo con permisos 0600.</li>
+          <li><b>Modelo local primero.</b> La barra avisa <code>local</code> o <code>remoto</code> antes de mandar nada.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="modelos" class="section">
+      <div class="wrap">
+        <p class="kicker">Modelos</p>
+        <h2>Usá el LLM que ya tenés.</h2>
+        <p class="sub">El catálogo se edita desde la app. Ves el estado real de cada modelo y se usa el primero que esté listo.</p>
+
+        <div class="models">
+          <div class="model">
+            <span class="badge local">local</span>
+            <h3>Ollama</h3>
+            <p>Modelos locales por el demonio de Ollama. La app los baja y los precarga.</p>
+          </div>
+          <div class="model">
+            <span class="badge local">local</span>
+            <h3>CLI</h3>
+            <p>Cualquier CLI ya autenticada: <code>claude -p</code>, <code>codex</code> y compañía.</p>
+          </div>
+          <div class="model">
+            <span class="badge">local o remoto</span>
+            <h3>Compatible OpenAI</h3>
+            <p>LM Studio, llama.cpp, vLLM, OpenAI, Groq, OpenRouter, DeepSeek, Mistral.</p>
+          </div>
+          <div class="model">
+            <span class="badge">remoto</span>
+            <h3>Anthropic</h3>
+            <p>La API de mensajes de Anthropic, con tu propia clave.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="requisitos" class="section">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Requisitos</p>
+          <h2>Listo en un comando.</h2>
+          <ul class="reqs">
+            <li>macOS 14.4 o posterior</li>
+            <li>Mac con Apple Silicon</li>
+            <li>Python 3.12</li>
+            <li>Command Line Tools de Xcode</li>
+          </ul>
+        </div>
+        <div class="terminal">
+          <div class="term-bar"><span class="lights"><i></i><i></i><i></i></span></div>
+<pre><code><span class="c"># instalar dependencias y modelos</span>
+<span class="p">$</span> ./scripts/setup.sh
+
+<span class="c"># abrir la app</span>
+<span class="p">$</span> npm install
+<span class="p">$</span> npx tauri dev</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final">
+      <div class="wrap final-inner">
+        <img src="icon.png" alt="" width="72" height="72">
+        <h2>Tu próxima reunión en inglés, <em>sin nervios.</em></h2>
+        <a class="btn btn-primary" href="https://github.com/NubaraApp/nubara-talk">Ver el proyecto</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Nubara</span>
+      <span>Hecho para macOS · Corre en local</span>
+    </div>
+  </footer>
+</body>
+</html>
